@@ -24,7 +24,7 @@ const translations = {
 
         "cta_title": "Confianza y Responsabilidad",
         "cta_subtitle": "Angie´s Cleaning Services es sinónimo de calidad y servicio excepcional.",
-        "cta_founders": "Ehrlich Gutierre & Angelica Pale Fundadores",
+        "cta_founders": "Ehrlich Gutiérrez & Angelica Pale Fundadores",
         "cta_button": "Ver nuestros servicios",
 
         "featured_services_title": "Servicios Destacados",
@@ -116,7 +116,7 @@ const translations = {
         "founders_title": "Fundadores",
         "founder_angelica": "Angelica Pale",
         "founder_owner_female": "Propietaria",
-        "founder_ehrlich": "Ehrlich Gutierre",
+        "founder_ehrlich": "Ehrlich Gutiérrez",
         "founder_owner_male": "Propietario",
         "our_history_title": "Nuestra Historia",
         "history_2022_title": "Fundación de Angie´s Cleaning Services",
@@ -233,7 +233,7 @@ const translations = {
 
         "cta_title": "Trust and Responsibility",
         "cta_subtitle": "Angie´s Cleaning Services is synonymous with quality and exceptional service.",
-        "cta_founders": "Ehrlich Gutierre & Angelica Pale Founders",
+        "cta_founders": "Ehrlich Gutiérrez & Angelica Pale Founders",
         "cta_button": "View our services",
 
         "featured_services_title": "Featured Services",
@@ -324,7 +324,7 @@ const translations = {
         "founders_title": "Founders",
         "founder_angelica": "Angelica Pale",
         "founder_owner_female": "Owner",
-        "founder_ehrlich": "Ehrlich Gutierre",
+        "founder_ehrlich": "Ehrlich Gutiérrez",
         "founder_owner_male": "Owner",
         "our_history_title": "Our History",
         "history_2022_title": "Foundation of Angie´s Cleaning Services",
