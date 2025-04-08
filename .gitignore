@@ -1,0 +1,42 @@
+# Carpetas comunes que no se deben subir
+/vendor/
+node_modules/
+bower_components/
+.env
+.env.* 
+.idea/
+.vscode/
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+
+# Archivos de XAMPP / configuración local
+htdocs/
+*.sql
+*.sqlite
+*.db
+
+# Cache y sesiones
+cache/
+*.cache
+*.session
+
+# Archivos de compilación o empaquetado
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Archivos de imagen temporal
+*.psd
+*.ai
+*.xcf
+
+# Ignora carpetas específicas de tus pruebas locales (opcional)
+tests/
+test/
