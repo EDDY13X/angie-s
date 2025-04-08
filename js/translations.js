@@ -83,7 +83,7 @@ const translations = {
         "footer_contact_us": "Contáctanos",
         "footer_san_antonio": "San Antonio, Texas",
         "footer_all_rights_reserved": "Todos los Derechos Reservados.",
-        "footer_design_by": "Diseño por SoftwareMaster",
+        "footer_design_by": "Diseño por X Digital Services",
         // Ya existen las llaves del index
         "about_title": "Acerca de",
         "about_breadcrumb_title": "Acerca de",
@@ -292,7 +292,7 @@ const translations = {
         "footer_contact_us": "Contact Us",
         "footer_san_antonio": "San Antonio, Texas",
         "footer_all_rights_reserved": "All Rights Reserved.",
-        "footer_design_by": "Designed by SoftwareMaster",
+        "footer_design_by": "Designed by X Digital Services",
         "about_title": "About Us",
         "about_breadcrumb_title": "About Us",
         "breadcrumb_home": "Home",
