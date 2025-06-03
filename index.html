@@ -1,1739 +1,927 @@
- <!DOCTYPE html>
-
+<!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
-
-
 <head>
-
-  <title>Home</title>
-
-  <meta name="format-detection" content="telephone=no">
-
-  <meta name="viewport"
-
-    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <meta charset="utf-8">
-
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Stylesheets-->
-
-  <link rel="stylesheet" type="text/css"
-
-    href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
-
-  <link rel="stylesheet" href="css/bootstrap.css">
-
-  <link rel="stylesheet" href="css/fonts.css">
-
-  <link rel="stylesheet" href="css/style.css">
-
+  <title>Home</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 
+    NOTA DEL DESARROLLADOR: Asegúrate de que las rutas a tus archivos CSS (bootstrap.css, fonts.css, style.css) 
+    son correctas y que estos archivos contienen los estilos necesarios para el RD Navbar.
+    El problema del header cubriendo media pantalla es muy probable que se deba a estilos en estos archivos.
+  -->
 </head>
 
-
-
 <body>
-
-  <!-- Botón para cambiar de idioma -->
-
-  <div style="position: absolute; top: 10px; right: 10px; z-index: 9999;">
-
-    <button id="lang-toggle" style="background: transparent; border: none; cursor: pointer;">
-
-      <img src="images/lang-icon.png" alt="Cambiar idioma" width="30" height="30">
-
-    </button>
-
-  </div>
-
-
-
-  <div class="preloader">
-
-    <div class="wrapper-triangle">
-
-      <div class="pen">
-
-        <div class="line-triangle">
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-        </div>
-
-        <div class="line-triangle">
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-        </div>
-
-        <div class="line-triangle">
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-          <div class="triangle"></div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="page">
-
-    <!-- Page Header-->
-
-    <header class="section page-header">
-
-      <!-- RD Navbar-->
-
-      <div class="rd-navbar-wrap">
-
-        <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
-
-          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
-
-          data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
-
-          data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
-
-          data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="56px" data-xl-stick-up-offset="56px"
-
-          data-xxl-stick-up-offset="56px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-
-          <div class="rd-navbar-inner-outer">
-
-            <div class="rd-navbar-inner">
-
-              <!-- RD Navbar Panel-->
-
-              <div class="rd-navbar-panel">
-
-                <!-- RD Navbar Toggle-->
-
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-
-                <!-- RD Navbar Brand-->
-
-                <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark"
-
-                      src="images/logo-198x66.png" alt="" width="198" height="66" /></a></div>
-
-              </div>
-
-              <div class="rd-navbar-right rd-navbar-nav-wrap">
-
-                <div class="rd-navbar-aside">
-
-                  <ul class="rd-navbar-contacts-2">
-
-                    <li>
-
-                      <div class="unit unit-spacing-xs">
-
-                        <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-
-                        <div class="unit-body"><a class="phone" href="https://w.app/cHg1CL">+1 2109014985</a></div>
-
-                        <div class="unit-body"><a class="phone" href="https://w.app/rWuZoB">+1 2108159559</a></div>
-
-                      </div>
-
-                    </li>
-
-                    <li>
-
-                      <div class="unit unit-spacing-xs">
-
-                        <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-
-                        <div class="unit-body"><a class="address" href="#">San Antonio, Texas</a></div>
-
-                      </div>
-
-                    </li>
-
-                  </ul>
-
-                  <ul class="list-share-2">
-
-                    <li><a class="icon fa fa-facebook" href="https://www.facebook.com/share/1Cag9CCrPz/?mibextid=LQQJ4d"
-
-                        target="_blank"></a></li>
-
-                    <li><a class="icon fa fa-tiktok"
-
-                        href="https://www.tiktok.com/@angies.cleaning.s?_t=8sDk8zCtyyc&_r=1" target="_blank"></a></li>
-
-                    <li><a class="icon fa fa-instagram"
-
-                        href="https://www.instagram.com/angies.cleaning_services?igsh=MWFxMmwwYjRkMm9xcQ=="
-
-                        target="_blank"></a></li>
-
-                  </ul>
-
-                </div>
-
-                <div class="rd-navbar-main">
-
-                  <!-- RD Navbar Nav-->
-
-                  <ul class="rd-navbar-nav">
-
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html" data-key="menu_home">Inicio</a></li>
-
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html" data-key="menu_about">Acerca de</a></li>
-
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html" data-key="menu_areas">Áreas que Cubrimos</a></li>
-
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" data-key="menu_contact">Contacto</a></li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-              <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1"
-
-                data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
-
-                data-multitoggle-isolate="data-multitoggle-isolate">
-
-                <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span
-
-                    class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
-
-                </div>
-
-              </div>
-
-              <div class="rd-navbar-project">
-
-                <div class="rd-navbar-project-header">
-
-                  <h5 class="rd-navbar-project-title" data-key="gallery_title">Galería</h5>
-
-                  <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close"
-
-                    data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
-
-                    data-multitoggle-isolate="data-multitoggle-isolate">
-
-                    <div class="project-close"><span></span><span></span></div>
-
-                  </div>
-
-                </div>
-
-                <div class="rd-navbar-project-content rd-navbar-content">
-
-                  <div>
-
-                    <div class="row gutters-20" data-lightgallery="group">
-
-                       <!-- Galería sin data-key porque son imágenes -->
-
-                       <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-104-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-104-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                       <!-- Galería sin data-key porque son imágenes -->
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-103-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-103-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                       <!-- Galería sin data-key porque son imágenes -->
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-102-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-102-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                       <!-- Galería sin data-key porque son imágenes -->
-
-                       <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-101-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-101-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-100-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-100-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                           <!-- Galería sin data-key porque son imágenes -->
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-1-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-1-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <!-- Galería sin data-key porque son imágenes -->
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-2-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-2-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-3-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-3-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-4-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-4-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-5-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-5-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                      <div class="col-6">
-
-                        <article class="thumbnail thumbnail-creative"><a href="images/project-6-1200x800-original.jpg"
-
-                            data-lightgallery="item">
-
-                            <div class="thumbnail-creative-figure"><img src="images/project-6-195x164.jpg" alt=""
-
-                                width="195" height="164" />
-
-                            </div>
-
-                            <div class="thumbnail-creative-caption"><span
-
-                                class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-
-                          </a></article>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </nav>
-
-      </div>
-
-    </header>
-
-    <!-- Swiper-->
-
-    <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true"
-
-      data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
-
-      <div class="swiper-wrapper text-sm-left">
-
-        <div class="swiper-slide context-dark" data-slide-bg="images/slide-1-1920x753.jpg">
-
-          <div class="swiper-slide-caption section-md">
-
-            <div class="container">
-
-              <div class="row">
-
-                <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
-
-                  <h3 class="oh swiper-title">
-
-                    <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_slide1_title">Limpieza Impecable</span>
-
-                  </h3>
-
-                  <p class="big swiper-text" data-caption-animate="fadeInLeft" data-caption-delay="300" data-key="hero_slide1_subtitle">Experimente la calidad de Angie´s Cleaning Services, una de las mejores empresas de limpieza.</p>
-
-                  <a class="button button-lg button-primary button-winona button-shadow-2"
-
-                    href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
-
-                    data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
-
-                    Ver nuestros servicios
-
-                  </a>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="swiper-slide context-dark" data-slide-bg="images/slide-2-1920x753.jpg">
-
-          <div class="swiper-slide-caption section-md">
-
-            <div class="container">
-
-              <div class="row">
-
-                <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
-
-                  <h3 class="oh swiper-title"><span class="d-inline-block" data-caption-animate="slideInDown"
-
-                      data-caption-delay="0" data-key="hero_slide2_title">Calidad y Confianza</span></h3>
-
-                  <p class="big swiper-text" data-caption-animate="fadeInRight" data-caption-delay="300" data-key="hero_slide2_subtitle">Utilizamos solo
-
-                    los mejores productos y técnicas para ofrecer servicios de limpieza inigualables.</p>
-
-                  <div class="button-wrap oh">
-
-                    <a class="button button-lg button-primary button-winona button-shadow-2"
-
-                      href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
-
-                      data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
-
-                      Ver nuestros servicios
-
-                    </a>
-
-                  </div>
-
-
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Swiper Pagination-->
-
-      <div class="swiper-pagination" data-bullet-custom="true"></div>
-
-      <!-- Swiper Navigation-->
-
-      <div class="swiper-button-prev">
-
-        <div class="preview">
-
-          <div class="preview__img"></div>
-
-        </div>
-
-        <div class="swiper-button-arrow"></div>
-
-      </div>
-
-      <div class="swiper-button-next">
-
-        <div class="swiper-button-arrow"></div>
-
-        <div class="preview">
-
-          <div class="preview__img"></div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- What We Offer-->
-
-    <section class="section section-md bg-default">
-
-      <div class="container">
-
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown" data-key="services_section_title">Nuestros Servicios</span></h3>
-
-        <div class="row row-md row-30">
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInUp">
-
-                <div class="services-terri-figure"><img src="images/menu-1-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-leaf"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_cleaning_homes">Limpieza de Casas</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInDown">
-
-                <div class="services-terri-figure"><img src="images/menu-2-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-sun"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_deep_cleaning">Limpieza Profunda</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInUp">
-
-                <div class="services-terri-figure"><img src="images/menu-3-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-trash"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_post_construction">Limpieza Post-Construcción</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInDown">
-
-                <div class="services-terri-figure"><img src="images/menu-4-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-home"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_airbnb">Limpieza de Airbnb</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInUp">
-
-                <div class="services-terri-figure"><img src="images/menu-5-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-apartment"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_fridge">Limpieza de Refrigeradores</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4">
-
-            <div class="oh-desktop">
-
-              <article class="services-terri wow slideInDown">
-
-                <div class="services-terri-figure"><img src="images/menu-6-370x278.jpg" alt="" width="370"
-
-                    height="278" />
-
-                </div>
-
-                <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
-
-                  <h5 class="services-terri-title"><a href="#" data-key="services_carpets">Limpieza de Alfombras</a></h5>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Section CTA-->
-
-    <section class="primary-overlay section parallax-container" data-parallax-img="images/bg-3.jpg">
-
-      <div class="parallax-content section-xl context-dark text-md-left">
-
-        <div class="container">
-
-          <div class="row justify-content-end">
-
-            <div class="col-sm-8 col-md-7 col-lg-5">
-
-              <div class="cta-modern">
-
-                <h3 class="cta-modern-title wow fadeInRight" data-key="cta_title">Confianza y Responsabilidad</h3>
-
-                <p class="lead" data-key="cta_subtitle">Angie´s Cleaning Services es sinónimo de calidad y servicio excepcional.</p>
-
-                <p class="cta-modern-text oh-desktop" data-wow-delay=".1s"><span
-
-                    class="cta-modern-decor wow slideInLeft"></span><span class="d-inline-block wow slideInDown" data-key="cta_founders">
-
-                    Ehrlich Gutiérrez & Angelica Pale Fundadores</span></p>
-
-                <a class="button button-md button-secondary-2 button-winona wow fadeInUp" href="#"
-
-                  data-wow-delay=".2s" data-key="cta_button">Ver nuestros servicios</a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Our Shop (Productos Destacados)-->
-
-    <section class="section section-lg bg-default">
-
-      <div class="container">
-
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp" data-key="featured_services_title">Servicios Destacados</span></h3>
-
-        <div class="row row-lg row-30">
-
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-
-            <!-- Product-->
-
-            <article class="product wow fadeInLeft" data-wow-delay=".15s">
-
-              <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162" />
-
-              </div>
-
-              <h6 class="product-title" data-key="featured_services_deep_home">Limpieza Profunda de Casa</h6>
-
-              <div class="product-button">
-
-                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
-
-                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-
-            <!-- Product-->
-
-            <article class="product wow fadeInLeft" data-wow-delay=".1s">
-
-              <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162" />
-
-              </div>
-
-              <h6 class="product-title" data-key="featured_services_carpets">Limpieza de Alfombras</h6>
-
-              <div class="product-button">
-
-                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
-
-                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
-
-              </div><span class="product-badge product-badge-new" data-key="badge_new">Nuevo</span>
-
-            </article>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-
-            <!-- Product-->
-
-            <article class="product wow fadeInLeft" data-wow-delay=".05s">
-
-              <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162" />
-
-              </div>
-
-              <h6 class="product-title" data-key="featured_services_fridge">Limpieza de Refrigeradores</h6>
-
-              <div class="product-button">
-
-                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
-
-                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-
-            <!-- Product-->
-
-            <article class="product wow fadeInLeft">
-
-              <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162" />
-
-              </div>
-
-              <h6 class="product-title" data-key="featured_services_post_construction">Limpieza Post-Construcción</h6>
-
-              <div class="product-button">
-
-                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
-
-                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
-
-              </div><span class="product-badge product-badge-sale" data-key="badge_offer">Oferta</span>
-
-            </article>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Section CTA-->
-
-    <section class="primary-overlay section parallax-container" data-parallax-img="images/bg-4.jpg">
-
-      <div class="parallax-content section-xxl context-dark text-md-left">
-
-        <div class="container">
-
-          <div class="row justify-content-end">
-
-            <div class="col-sm-9 col-md-7 col-lg-5">
-
-              <div class="cta-modern">
-
-                <h3 class="cta-modern-title cta-modern-title-2 oh-desktop"><span
-
-                    class="d-inline-block wow fadeInLeft" data-key="discount_title">-10% en Limpieza de Refrigeradores y Alfombras</span></h3>
-
-                <p class="cta-modern-text cta-modern-text-2 oh-desktop" data-wow-delay=".1s"><span
-
-                    class="cta-modern-decor cta-modern-decor-2 wow slideInLeft"></span><span
-
-                    class="d-inline-block wow slideInUp" data-key="discount_subtitle">¡Disfruta de un servicio de limpieza inigualable!</span></p><a
-
-                  class="button button-lg button-secondary button-winona wow fadeInRight" href="contacts.html"
-
-                  data-wow-delay=".2s" data-key="discount_contact">Contáctanos</a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <section class="section section-last bg-default">
-
-      <div class="container-fluid container-inset-0 isotope-wrap">
-
-        <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery"
-
-          data-lightgallery="group">
-
-          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_best_products"><a href="#">Los Mejores Productos</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_cleaning_guarantee">Limpieza Garantizada</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_attention_details"><a href="#">Atención a Detalles</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_professional_care">Cuidado Profesional</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_quality_tools"><a href="#">Herramientas de Calidad</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_professional_tools">Utensilios Profesionales</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary wow slideInUp">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_fresh_environments"><a href="#">Ambientes Frescos</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_full_service">Servicio Completo</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_effective_solutions"><a href="#">Soluciones Efectivas</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_visible_results">Resultados Visibles</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_experience_professionalism"><a href="#">Experiencia y Profesionalismo</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_excellent_reputation">Excelente Reputación</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
-
-              <div class="thumbnail-mary-caption">
-
-                <div>
-
-                  <h6 class="thumbnail-mary-title" data-key="gallery_variety_services"><a href="#">Variedad de Servicios</a></h6>
-
-                  <div class="thumbnail-mary-location" data-key="gallery_choose_ideal">Elige el Ideal para Ti</div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <section class="section section-last bg-default">
-
-        <div class="container-fluid container-inset-0 isotope-wrap">
-
-          <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
-
-            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-1-310x585.jpg" alt="" width="310" height="585"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_best_products">Los Mejores Productos</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_cleaning_guarantee">Limpieza Garantizada</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-2-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-2-631x587.jpg" alt="" width="631" height="587"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_attention_details">Atención a Detalles</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_professional_care">Cuidado Profesional</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-3-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-3-311x289.jpg" alt="" width="311" height="289"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_quality_tools">Herramientas de Calidad</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_professional_tools">Utensilios Profesionales</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary wow slideInUp">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-4-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-4-631x289.jpg" alt="" width="631" height="289"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_fresh_environments">Ambientes Frescos</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_full_service">Servicio Completo</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-5-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-5-311x289.jpg" alt="" width="311" height="289"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_effective_solutions">Soluciones Efectivas</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_visible_results">Resultados Visibles</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-6-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-6-311x289.jpg" alt="" width="311" height="289"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_experience_professionalism">Experiencia y Profesionalismo</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_excellent_reputation">Excelente Reputación</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-
-              <!-- Thumbnail Mary-->
-
-              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
-
-                <a class="thumbnail-mary-figure" href="images/gallery-7-1200x800-original.jpg" data-lightgallery="item">
-
-                  <img src="images/gallery-7-311x289.jpg" alt="" width="311" height="289"/>
-
-                </a>
-
-                <div class="thumbnail-mary-caption">
-
-                  <div>
-
-                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_variety_services">Variedad de Servicios</a></h6>
-
-                    <div class="thumbnail-mary-location" data-key="gallery_choose_ideal">Elige el Ideal para Ti</div>
-
-                  </div>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      
-
-    <div class="group-custom-1 group-middle oh-desktop">
-
-      <a href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479"
-
-        class="button button-lg button-primary button-winona wow fadeInRight" role="button" data-key="send_message_button">Enviar mensaje</a>
-
-
-
-      <!-- Quote Classic-->
-
-      <article class="quote-classic quote-classic-3 wow slideInDown">
-
-        <div class="quote-classic-text">
-
-          <p class="q" data-key="quote_reservation">Por favor, reserva con al menos 1 día de anticipación.</p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-    </form>
-
-  </div>
-
-  </section>
-
-
-
-  <!-- Section Services  Last section-->
-
-  <section class="section section-sm bg-default">
-
-    <div class="container">
-
-      <div class="owl-carousel owl-style-11 dots-style-2" data-items="1" data-sm-items="1" data-lg-items="2"
-
-        data-xl-items="4" data-margin="30" data-dots="true" data-mouse-drag="true" data-rtl="true">
-
-        <article class="box-icon-megan wow fadeInUp">
-
-          <div class="box-icon-megan-header">
-
-            <div class="box-icon-megan-icon linearicons-bag"></div>
-
-          </div>
-
-          <h5 class="box-icon-megan-title"><a href="#" data-key="adv_affordable_prices">Tarifas Accesibles</a></h5>
-
-          <p class="box-icon-megan-text" data-key="adv_affordable_prices_desc">Si solicitas más de un servicio, podrás obtener tarifas especiales.</p>
-
-        </article>
-
-        <article class="box-icon-megan wow fadeInUp" data-wow-delay=".05s">
-
-          <div class="box-icon-megan-header">
-
-            <div class="box-icon-megan-icon linearicons-map2"></div>
-
-          </div>
-
-          <h5 class="box-icon-megan-title"><a href="#" data-key="adv_convenient_location">Ubicación Conveniente</a></h5>
-
-          <p class="box-icon-megan-text" data-key="adv_convenient_location_desc">Estamos ubicados en San Antonio, Texas, y brindamos un acceso rápido a nuestros
-
-            servicios.</p>
-
-        </article>
-
-        <article class="box-icon-megan wow fadeInUp" data-wow-delay=".1s">
-
-          <div class="box-icon-megan-header">
-
-            <div class="box-icon-megan-icon linearicons-radar"></div>
-
-          </div>
-
-          <h5 class="box-icon-megan-title"><a href="#" data-key="adv_custom_support">Soporte Personalizado</a></h5>
-
-          <p class="box-icon-megan-text" data-key="adv_custom_support_desc">Ofrecemos asesoría personalizada para cubrir todas tus necesidades de limpieza.
-
-          </p>
-
-        </article>
-
-        <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
-
-          <div class="box-icon-megan-header">
-
-            <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
-
-          </div>
-
-          <h5 class="box-icon-megan-title"><a href="#" data-key="adv_best_service">Mejor Servicio</a></h5>
-
-          <p class="box-icon-megan-text" data-key="adv_best_service_desc">Tu satisfacción es nuestra prioridad, brindando una atención y servicio
-
-            excepcionales.</p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Page Footer-->
-
-  <footer class="section footer-modern context-dark footer-modern-2">
-
-    <div class="footer-modern-line">
-
-      <div class="container">
-
-        <div class="row row-50">
-
-          <div class="col-md-6 col-lg-4">
-
-            <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_our_services">Nuestros Servicios</span></h5>
-
-            <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
-
-              <li><a href="#" data-key="footer_cleaning_homes">Limpieza de Casas</a></li>
-
-              <li><a href="#" data-key="footer_deep_cleaning">Limpieza Profunda</a></li>
-
-              <li><a href="#" data-key="footer_carpets">Limpieza de Alfombras</a></li>
-
-              <li><a href="#" data-key="footer_fridge">Limpieza de Refrigeradores</a></li>
-
-              <li><a href="#" data-key="footer_post_construction">Limpieza Post-Construcción</a></li>
-
-              <li><a href="#" data-key="footer_airbnb">Limpieza de Airbnb</a></li>
-
-            </ul>
-
-          </div>
-
-          <div class="col-md-6 col-lg-4 col-xl-3">
-
-            <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_information">Información</span>
-
-            </h5>
-
-            <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
-
-              <li><a href="about-us.html" data-key="footer_about">Acerca de</a></li>
-
-              <li><a href="#" data-key="footer_services">Servicios</a></li>
-
-              <li><a href="contacts.html" data-key="footer_contact">Contacto</a></li>
-
-            </ul>
-
-          </div>
-
-          <div class="col-lg-4 col-xl-5">
-
-            <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_dont_wait">¡No esperes más!</span></h5>
-
-            <p class="wow fadeInRight" data-key="footer_solution">Nuestros servicios son la solución que necesitas. Contáctanos hoy y descubre cómo
-
-              podemos ayudarte.</p>
-
-            <div class="form-button form-button-2 wow slideInRight">
-
-              <button class="button button-sm button-icon-3 button-primary button-winona"
-
-                onclick="location.href='mailto:angiesscleaning@gmail.com';" data-key="footer_contact_us">
-
-                Contáctanos
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="footer-modern-line-2">
-
-      <div class="container">
-
-        <div class="row row-30 align-items-center">
-
-          <div class="col-sm-6 col-md-7 col-lg-4 col-xl-4">
-
-            <div class="row row-30 align-items-center text-lg-center">
-
-              <div class="col-md-7 col-xl-6"><a class="brand" href="index.html"><img
-
-                    src="images/logo-inverse-198x66.png" alt="" width="198" height="66" /></a></div>
-
-              <div class="col-md-5 col-xl-6">
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-sm-6 col-md-12 col-lg-8 col-xl-8 oh-desktop">
-
-            <div class="group-xmd group-sm-justify">
-
-              <div class="footer-modern-contacts wow slideInUp">
-
-                <div class="unit unit-spacing-sm align-items-center">
-
-                  <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
-
-                  <div class="unit-body"><a class="phone" href="https://w.app/cHg1CL">+1 2109014985</a></div>
-
-                  <div class="unit-body"><a class="phone" href="https://w.app/rWuZoB">+1 2108159559</a></div>
-
-                </div>
-
-              </div>
-
-              <div class="footer-modern-contacts wow slideInDown">
-
-                <div class="unit unit-spacing-sm align-items-center">
-
-                  <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
-
-                  <div class="unit-body"><a class="mail"
-
-                      href="mailto:angiesscleaning@gmail.com">angiesscleaning@gmail.com</a></div>
-
-                </div>
-
-              </div>
-
-              <div class="wow slideInRight">
-
-                <ul class="list-inline footer-social-list footer-social-list-2 footer-social-list-3">
-
-                  <li><a class="icon mdi mdi-facebook" href="https://acortar.link/jgG9LO"></a></li>
-
-                  <li><a class="icon mdi mdi-camera-front-variant" href="https://acortar.link/4nCzlr"></a></li>
-
-                  <li><a class="icon mdi mdi-instagram" href="https://acortar.link/Q5n37t"></a></li>
-
-                </ul>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="footer-modern-line-3">
-
-      <div class="container">
-
-        <div class="row row-10 justify-content-between">
-
-          <div class="col-md-6"><span data-key="footer_san_antonio">San Antonio, Texas</span></div>
-
-          <div class="col-md-auto">
-
-            <p class="rights"><span>&copy;&nbsp;</span><span
-
-                class="copyright-year"></span><span></span><span>.&nbsp;</span>
-
-              <span data-key="footer_all_rights_reserved">Todos los Derechos Reservados.</span><span> <span data-key="footer_design_by">Diseño&nbsp;por&nbsp;X Digital Services</span></span>
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <!-- End Page Footer-->
-
-  </div>
-
-  <!-- Global Mailform Output-->
-
-  <div class="snackbars" id="form-output-global"></div>
-
-  <!-- Javascript-->
-
-  <script src="js/core.min.js"></script>
-
-  <script src="js/script.js"></script>
-
-  <script src="js/translations.js"></script>
-
-  <script>
-
-    let currentLanguage = 'es';
-
-
-
-    function translatePage(lang) {
-
-      const elements = document.querySelectorAll('[data-key]');
-
-      elements.forEach(el => {
-
-        const key = el.getAttribute('data-key');
-
-        el.textContent = translations[lang][key];
-
-      });
-
-    }
-
-
-
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-
-      currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
-
-      translatePage(currentLanguage);
-
-    });
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-
-      translatePage(currentLanguage);
-
-    });
-
-  </script>
-
-  <!-- coded by Himic-->
-
+  <!-- Botón para cambiar de idioma -->
+  <div style="position: absolute; top: 10px; right: 10px; z-index: 9999;">
+    <button id="lang-toggle" style="background: transparent; border: none; cursor: pointer;">
+      <img src="images/lang-icon.png" alt="Cambiar idioma" width="30" height="30">
+    </button>
+  </div>
+
+  <div class="preloader">
+    <div class="wrapper-triangle">
+      <div class="pen">
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+        <div class="line-triangle">
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <!-- Page Header-->
+    <header class="section page-header">
+      <!-- 
+        NOTA DEL DESARROLLADOR: Revisa los estilos CSS para `.page-header`.
+        Propiedades como `height`, `max-height`, `position` podrían estar causando el problema.
+      -->
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <!-- 
+          NOTA DEL DESARROLLADOR: `.rd-navbar-wrap` es otro selector a investigar en tu CSS.
+          Podría tener estilos que afecten la altura o el posicionamiento del navbar.
+        -->
+        <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+          data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="56px" data-xl-stick-up-offset="56px"
+          data-xxl-stick-up-offset="56px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <!--
+            NOTA DEL DESARROLLADOR: El componente RD Navbar es complejo.
+            El problema de "cubrir media pantalla" probablemente se origine en los estilos CSS aplicados
+            a `.rd-navbar`, `.rd-navbar-fixed`, `.rd-navbar-inner`, o alguno de sus hijos.
+
+            QUÉ REVISAR EN TU CSS (style.css o similar):
+            1. Selectores como `.rd-navbar-fixed`:
+               - `height`: ¿Está definido a un valor grande como `50vh`, `100vh`, o un valor en píxeles muy alto?
+               - `max-height`: ¿Está restringiendo la altura adecuadamente?
+               - `min-height`: ¿Podría estar forzando una altura mínima excesiva?
+               - `position: fixed; top: 0; bottom: 0;` (o `bottom: 50%;`) podría hacer que ocupe toda o media pantalla.
+               - `padding` o `margin` excesivos.
+            2. `.rd-navbar-inner-outer` y `.rd-navbar-inner`: Sus alturas y paddings también contribuyen.
+            3. `.rd-navbar-project`: Esta es la sección de la galería. Si está visible por defecto (debido a la clase
+               `rd-navbar-project-hamburger-open` en el botón del menú de proyectos, o por CSS) y su contenido es alto,
+               podría expandir enormemente un header fijo. Busca estilos como:
+               - `.rd-navbar-project.active` (o similar si se añade una clase cuando está abierto)
+               - `.rd-navbar-project-content` (altura, overflow)
+            4. JavaScript (`script.js`, `core.min.js`): Revisa si algún script está modificando dinámicamente
+               la altura o estilos del header/navbar.
+            5. Utiliza las herramientas de desarrollador de tu navegador (Inspeccionar Elemento) para ver los estilos computados
+               del header y sus componentes. Esto te ayudará a identificar qué regla CSS está causando la altura excesiva.
+          -->
+          <div class="rd-navbar-inner-outer">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark"
+                      src="images/logo-198x66.png" alt="" width="198" height="66" /></a></div>
+              </div>
+              <div class="rd-navbar-right rd-navbar-nav-wrap">
+                <div class="rd-navbar-aside">
+                  <ul class="rd-navbar-contacts-2">
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
+                        <div class="unit-body"><a class="phone" href="https://w.app/cHg1CL">+1 2109014985</a></div>
+                        <div class="unit-body"><a class="phone" href="https://w.app/rWuZoB">+1 2108159559</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                        <div class="unit-body"><a class="address" href="#">San Antonio, Texas</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-share-2">
+                    <li><a class="icon fa fa-facebook" href="https://www.facebook.com/share/1Cag9CCrPz/?mibextid=LQQJ4d"
+                        target="_blank"></a></li>
+                    <li><a class="icon fa fa-tiktok"
+                        href="https://www.tiktok.com/@angies.cleaning.s?_t=8sDk8zCtyyc&_r=1" target="_blank"></a></li>
+                    <li><a class="icon fa fa-instagram"
+                        href="https://www.instagram.com/angies.cleaning_services?igsh=MWFxMmwwYjRkMm9xcQ=="
+                        target="_blank"></a></li>
+                  </ul>
+                </div>
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html" data-key="menu_home">Inicio</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html" data-key="menu_about">Acerca de</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html" data-key="menu_areas">Áreas que Cubrimos</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" data-key="menu_contact">Contacto</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 
+                NOTA DEL DESARROLLADOR: Este es el botón que abre la galería/proyectos.
+                La clase `rd-navbar-project-hamburger-open` podría indicar que la galería está abierta por defecto.
+                Si la galería (`.rd-navbar-project`) es muy alta, esto podría ser la causa del problema.
+              -->
+              <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1"
+                data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
+                data-multitoggle-isolate="data-multitoggle-isolate">
+                <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span
+                    class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
+                </div>
+              </div>
+              <div class="rd-navbar-project">
+                <div class="rd-navbar-project-header">
+                  <h5 class="rd-navbar-project-title" data-key="gallery_title">Galería</h5>
+                  <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close"
+                    data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
+                    data-multitoggle-isolate="data-multitoggle-isolate">
+                    <div class="project-close"><span></span><span></span></div>
+                  </div>
+                </div>
+                <div class="rd-navbar-project-content rd-navbar-content">
+                  <div>
+                    <div class="row gutters-20" data-lightgallery="group">
+                        <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-104-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-104-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-103-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-103-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-102-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-102-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-101-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-101-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-100-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-100-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-1-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-1-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-2-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-2-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-3-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-3-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-4-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-4-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-5-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-5-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                       <div class="col-6">
+                         <article class="thumbnail thumbnail-creative"><a href="images/project-6-1200x800-original.jpg"
+                             data-lightgallery="item">
+                             <div class="thumbnail-creative-figure"><img src="images/project-6-195x164.jpg" alt=""
+                                 width="195" height="164" />
+                             </div>
+                             <div class="thumbnail-creative-caption"><span
+                                 class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                           </a></article>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Swiper-->
+    <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true"
+      data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
+      <div class="swiper-wrapper text-sm-left">
+        <div class="swiper-slide context-dark" data-slide-bg="images/slide-1-1920x753.jpg">
+          <div class="swiper-slide-caption section-md">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
+                  <h3 class="oh swiper-title">
+                    <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_slide1_title">Limpieza Impecable</span>
+                  </h3>
+                  <p class="big swiper-text" data-caption-animate="fadeInLeft" data-caption-delay="300" data-key="hero_slide1_subtitle">Experimente la calidad de Angie´s Cleaning Services, una de las mejores empresas de limpieza.</p>
+                  <a class="button button-lg button-primary button-winona button-shadow-2"
+                    href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
+                    data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
+                    Ver nuestros servicios
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide context-dark" data-slide-bg="images/slide-2-1920x753.jpg">
+          <div class="swiper-slide-caption section-md">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
+                  <h3 class="oh swiper-title"><span class="d-inline-block" data-caption-animate="slideInDown"
+                      data-caption-delay="0" data-key="hero_slide2_title">Calidad y Confianza</span></h3>
+                  <p class="big swiper-text" data-caption-animate="fadeInRight" data-caption-delay="300" data-key="hero_slide2_subtitle">Utilizamos solo
+                    los mejores productos y técnicas para ofrecer servicios de limpieza inigualables.</p>
+                  <div class="button-wrap oh">
+                    <a class="button button-lg button-primary button-winona button-shadow-2"
+                      href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
+                      data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
+                      Ver nuestros servicios
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Swiper Pagination-->
+      <div class="swiper-pagination" data-bullet-custom="true"></div>
+      <!-- Swiper Navigation-->
+      <div class="swiper-button-prev">
+        <div class="preview">
+          <div class="preview__img"></div>
+        </div>
+        <div class="swiper-button-arrow"></div>
+      </div>
+      <div class="swiper-button-next">
+        <div class="swiper-button-arrow"></div>
+        <div class="preview">
+          <div class="preview__img"></div>
+        </div>
+      </div>
+    </section>
+    <!-- What We Offer-->
+    <section class="section section-md bg-default">
+      <div class="container">
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown" data-key="services_section_title">Nuestros Servicios</span></h3>
+        <div class="row row-md row-30">
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-1-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-leaf"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_cleaning_homes">Limpieza de Casas</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-2-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-sun"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_deep_cleaning">Limpieza Profunda</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-3-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-trash"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_post_construction">Limpieza Post-Construcción</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-4-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-home"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_airbnb">Limpieza de Airbnb</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-5-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-apartment"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_fridge">Limpieza de Refrigeradores</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-6-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_carpets">Limpieza de Alfombras</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section CTA-->
+    <section class="primary-overlay section parallax-container" data-parallax-img="images/bg-3.jpg">
+      <div class="parallax-content section-xl context-dark text-md-left">
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-sm-8 col-md-7 col-lg-5">
+              <div class="cta-modern">
+                <h3 class="cta-modern-title wow fadeInRight" data-key="cta_title">Confianza y Responsabilidad</h3>
+                <p class="lead" data-key="cta_subtitle">Angie´s Cleaning Services es sinónimo de calidad y servicio excepcional.</p>
+                <p class="cta-modern-text oh-desktop" data-wow-delay=".1s"><span
+                    class="cta-modern-decor wow slideInLeft"></span><span class="d-inline-block wow slideInDown" data-key="cta_founders">
+                    Ehrlich Gutiérrez & Angelica Pale Fundadores</span></p>
+                <a class="button button-md button-secondary-2 button-winona wow fadeInUp" href="#"
+                  data-wow-delay=".2s" data-key="cta_button">Ver nuestros servicios</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Shop (Productos Destacados)-->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp" data-key="featured_services_title">Servicios Destacados</span></h3>
+        <div class="row row-lg row-30">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <!-- Product-->
+            <article class="product wow fadeInLeft" data-wow-delay=".15s">
+              <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162" />
+              </div>
+              <h6 class="product-title" data-key="featured_services_deep_home">Limpieza Profunda de Casa</h6>
+              <div class="product-button">
+                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
+                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <!-- Product-->
+            <article class="product wow fadeInLeft" data-wow-delay=".1s">
+              <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162" />
+              </div>
+              <h6 class="product-title" data-key="featured_services_carpets">Limpieza de Alfombras</h6>
+              <div class="product-button">
+                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
+                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
+              </div><span class="product-badge product-badge-new" data-key="badge_new">Nuevo</span>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <!-- Product-->
+            <article class="product wow fadeInLeft" data-wow-delay=".05s">
+              <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162" />
+              </div>
+              <h6 class="product-title" data-key="featured_services_fridge">Limpieza de Refrigeradores</h6>
+              <div class="product-button">
+                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
+                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <!-- Product-->
+            <article class="product wow fadeInLeft">
+              <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162" />
+              </div>
+              <h6 class="product-title" data-key="featured_services_post_construction">Limpieza Post-Construcción</h6>
+              <div class="product-button">
+                <div class="button-wrap"><a class="button button-xs button-primary button-winona"
+                    href="contacts.html" data-key="featured_services_hire">Contratar</a></div>
+              </div><span class="product-badge product-badge-sale" data-key="badge_offer">Oferta</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section CTA-->
+    <section class="primary-overlay section parallax-container" data-parallax-img="images/bg-4.jpg">
+      <div class="parallax-content section-xxl context-dark text-md-left">
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-sm-9 col-md-7 col-lg-5">
+              <div class="cta-modern">
+                <h3 class="cta-modern-title cta-modern-title-2 oh-desktop"><span
+                    class="d-inline-block wow fadeInLeft" data-key="discount_title">-10% en Limpieza de Refrigeradores y Alfombras</span></h3>
+                <p class="cta-modern-text cta-modern-text-2 oh-desktop" data-wow-delay=".1s"><span
+                    class="cta-modern-decor cta-modern-decor-2 wow slideInLeft"></span><span
+                    class="d-inline-block wow slideInUp" data-key="discount_subtitle">¡Disfruta de un servicio de limpieza inigualable!</span></p><a
+                  class="button button-lg button-secondary button-winona wow fadeInRight" href="contacts.html"
+                  data-wow-delay=".2s" data-key="discount_contact">Contáctanos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      NOTA DEL DESARROLLADOR: Parece que tienes dos secciones de galería "isotope" casi idénticas. 
+      La primera (arriba) solo tiene texto de marcador de posición en las miniaturas.
+      La segunda (abajo) tiene imágenes reales y enlaces.
+      Verifica si esto es intencional o si una de ellas es redundante.
+    -->
+    <section class="section section-last bg-default">
+      <div class="container-fluid container-inset-0 isotope-wrap">
+        <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery"
+          data-lightgallery="group">
+          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_best_products"><a href="#">Los Mejores Productos</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_cleaning_guarantee">Limpieza Garantizada</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_attention_details"><a href="#">Atención a Detalles</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_professional_care">Cuidado Profesional</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_quality_tools"><a href="#">Herramientas de Calidad</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_professional_tools">Utensilios Profesionales</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary wow slideInUp">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_fresh_environments"><a href="#">Ambientes Frescos</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_full_service">Servicio Completo</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_effective_solutions"><a href="#">Soluciones Efectivas</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_visible_results">Resultados Visibles</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_experience_professionalism"><a href="#">Experiencia y Profesionalismo</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_excellent_reputation">Excelente Reputación</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+            <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
+              <div class="thumbnail-mary-caption">
+                <div>
+                  <h6 class="thumbnail-mary-title" data-key="gallery_variety_services"><a href="#">Variedad de Servicios</a></h6>
+                  <div class="thumbnail-mary-location" data-key="gallery_choose_ideal">Elige el Ideal para Ti</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-last bg-default">
+        <div class="container-fluid container-inset-0 isotope-wrap">
+          <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
+            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
+                <a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-1-310x585.jpg" alt="" width="310" height="585"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_best_products">Los Mejores Productos</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_cleaning_guarantee">Limpieza Garantizada</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight">
+                <a class="thumbnail-mary-figure" href="images/gallery-2-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-2-631x587.jpg" alt="" width="631" height="587"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_attention_details">Atención a Detalles</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_professional_care">Cuidado Profesional</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown">
+                <a class="thumbnail-mary-figure" href="images/gallery-3-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-3-311x289.jpg" alt="" width="311" height="289"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_quality_tools">Herramientas de Calidad</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_professional_tools">Utensilios Profesionales</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary wow slideInUp">
+                <a class="thumbnail-mary-figure" href="images/gallery-4-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-4-631x289.jpg" alt="" width="631" height="289"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_fresh_environments">Ambientes Frescos</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_full_service">Servicio Completo</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp">
+                <a class="thumbnail-mary-figure" href="images/gallery-5-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-5-311x289.jpg" alt="" width="311" height="289"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_effective_solutions">Soluciones Efectivas</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_visible_results">Resultados Visibles</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight">
+                <a class="thumbnail-mary-figure" href="images/gallery-6-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-6-311x289.jpg" alt="" width="311" height="289"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_experience_professionalism">Experiencia y Profesionalismo</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_excellent_reputation">Excelente Reputación</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
+              <!-- Thumbnail Mary-->
+              <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
+                <a class="thumbnail-mary-figure" href="images/gallery-7-1200x800-original.jpg" data-lightgallery="item">
+                  <img src="images/gallery-7-311x289.jpg" alt="" width="311" height="289"/>
+                </a>
+                <div class="thumbnail-mary-caption">
+                  <div>
+                    <h6 class="thumbnail-mary-title"><a href="#" data-key="gallery_variety_services">Variedad de Servicios</a></h6>
+                    <div class="thumbnail-mary-location" data-key="gallery_choose_ideal">Elige el Ideal para Ti</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- 
+      NOTA DEL DESARROLLADOR: Las siguientes etiquetas </form>, </div>, y </section> parecían estar fuera de lugar
+      o no tener etiquetas de apertura correspondientes en el código original. Han sido eliminadas.
+      Si el div "group-custom-1" debía estar dentro de una sección o formulario, asegúrate de estructurarlo correctamente.
+      Originalmente, el código era:
+      </div>
+      </form>
+      </div>
+      </section>
+      Esto es incorrecto. El div "group-custom-1" está ahora correctamente posicionado como un bloque independiente.
+      Si necesitas que esté dentro de una sección, deberás añadir las etiquetas <section> y <div class="container"> (o similar) apropiadas.
+    -->
+    <div class="group-custom-1 group-middle oh-desktop">
+      <a href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479"
+        class="button button-lg button-primary button-winona wow fadeInRight" role="button" data-key="send_message_button">Enviar mensaje</a>
+
+      <!-- Quote Classic-->
+      <article class="quote-classic quote-classic-3 wow slideInDown">
+        <div class="quote-classic-text">
+          <p class="q" data-key="quote_reservation">Por favor, reserva con al menos 1 día de anticipación.</p>
+        </div>
+      </article>
+    </div>
+    <!-- Aquí terminaba el bloque problemático. Las etiquetas </form></div></section> han sido eliminadas. -->
+
+
+    <!-- Section Services Last section-->
+    <section class="section section-sm bg-default">
+      <div class="container">
+        <div class="owl-carousel owl-style-11 dots-style-2" data-items="1" data-sm-items="1" data-lg-items="2"
+          data-xl-items="4" data-margin="30" data-dots="true" data-mouse-drag="true" data-rtl="true">
+          <article class="box-icon-megan wow fadeInUp">
+            <div class="box-icon-megan-header">
+              <div class="box-icon-megan-icon linearicons-bag"></div>
+            </div>
+            <h5 class="box-icon-megan-title"><a href="#" data-key="adv_affordable_prices">Tarifas Accesibles</a></h5>
+            <p class="box-icon-megan-text" data-key="adv_affordable_prices_desc">Si solicitas más de un servicio, podrás obtener tarifas especiales.</p>
+          </article>
+          <article class="box-icon-megan wow fadeInUp" data-wow-delay=".05s">
+            <div class="box-icon-megan-header">
+              <div class="box-icon-megan-icon linearicons-map2"></div>
+            </div>
+            <h5 class="box-icon-megan-title"><a href="#" data-key="adv_convenient_location">Ubicación Conveniente</a></h5>
+            <p class="box-icon-megan-text" data-key="adv_convenient_location_desc">Estamos ubicados en San Antonio, Texas, y brindamos un acceso rápido a nuestros
+              servicios.</p>
+          </article>
+          <article class="box-icon-megan wow fadeInUp" data-wow-delay=".1s">
+            <div class="box-icon-megan-header">
+              <div class="box-icon-megan-icon linearicons-radar"></div>
+            </div>
+            <h5 class="box-icon-megan-title"><a href="#" data-key="adv_custom_support">Soporte Personalizado</a></h5>
+            <p class="box-icon-megan-text" data-key="adv_custom_support_desc">Ofrecemos asesoría personalizada para cubrir todas tus necesidades de limpieza.
+            </p>
+          </article>
+          <article class="box-icon-megan wow fadeInUp" data-wow-delay=".15s">
+            <div class="box-icon-megan-header">
+              <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
+            </div>
+            <h5 class="box-icon-megan-title"><a href="#" data-key="adv_best_service">Mejor Servicio</a></h5>
+            <p class="box-icon-megan-text" data-key="adv_best_service_desc">Tu satisfacción es nuestra prioridad, brindando una atención y servicio
+              excepcionales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Page Footer-->
+    <footer class="section footer-modern context-dark footer-modern-2">
+      <div class="footer-modern-line">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-md-6 col-lg-4">
+              <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_our_services">Nuestros Servicios</span></h5>
+              <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
+                <li><a href="#" data-key="footer_cleaning_homes">Limpieza de Casas</a></li>
+                <li><a href="#" data-key="footer_deep_cleaning">Limpieza Profunda</a></li>
+                <li><a href="#" data-key="footer_carpets">Limpieza de Alfombras</a></li>
+                <li><a href="#" data-key="footer_fridge">Limpieza de Refrigeradores</a></li>
+                <li><a href="#" data-key="footer_post_construction">Limpieza Post-Construcción</a></li>
+                <li><a href="#" data-key="footer_airbnb">Limpieza de Airbnb</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_information">Información</span>
+              </h5>
+              <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
+                <li><a href="about-us.html" data-key="footer_about">Acerca de</a></li>
+                <li><a href="#" data-key="footer_services">Servicios</a></li>
+                <li><a href="contacts.html" data-key="footer_contact">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-xl-5">
+              <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft" data-key="footer_dont_wait">¡No esperes más!</span></h5>
+              <p class="wow fadeInRight" data-key="footer_solution">Nuestros servicios son la solución que necesitas. Contáctanos hoy y descubre cómo
+                podemos ayudarte.</p>
+              <div class="form-button form-button-2 wow slideInRight">
+                <button class="button button-sm button-icon-3 button-primary button-winona"
+                  onclick="location.href='mailto:angiesscleaning@gmail.com';" data-key="footer_contact_us">
+                  Contáctanos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-modern-line-2">
+        <div class="container">
+          <div class="row row-30 align-items-center">
+            <div class="col-sm-6 col-md-7 col-lg-4 col-xl-4">
+              <div class="row row-30 align-items-center text-lg-center">
+                <div class="col-md-7 col-xl-6"><a class="brand" href="index.html"><img
+                      src="images/logo-inverse-198x66.png" alt="" width="198" height="66" /></a></div>
+                <div class="col-md-5 col-xl-6">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-8 col-xl-8 oh-desktop">
+              <div class="group-xmd group-sm-justify">
+                <div class="footer-modern-contacts wow slideInUp">
+                  <div class="unit unit-spacing-sm align-items-center">
+                    <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
+                    <div class="unit-body"><a class="phone" href="https://w.app/cHg1CL">+1 2109014985</a></div>
+                    <div class="unit-body"><a class="phone" href="https://w.app/rWuZoB">+1 2108159559</a></div>
+                  </div>
+                </div>
+                <div class="footer-modern-contacts wow slideInDown">
+                  <div class="unit unit-spacing-sm align-items-center">
+                    <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
+                    <div class="unit-body"><a class="mail"
+                        href="mailto:angiesscleaning@gmail.com">angiesscleaning@gmail.com</a></div>
+                  </div>
+                </div>
+                <div class="wow slideInRight">
+                  <ul class="list-inline footer-social-list footer-social-list-2 footer-social-list-3">
+                    <li><a class="icon mdi mdi-facebook" href="https://acortar.link/jgG9LO"></a></li>
+                    <li><a class="icon mdi mdi-camera-front-variant" href="https://acortar.link/4nCzlr"></a></li>
+                    <li><a class="icon mdi mdi-instagram" href="https://acortar.link/Q5n37t"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-modern-line-3">
+        <div class="container">
+          <div class="row row-10 justify-content-between">
+            <div class="col-md-6"><span data-key="footer_san_antonio">San Antonio, Texas</span></div>
+            <div class="col-md-auto">
+              <p class="rights"><span>&copy;&nbsp;</span><span
+                  class="copyright-year"></span><span></span><span>.&nbsp;</span>
+                <span data-key="footer_all_rights_reserved">Todos los Derechos Reservados.</span><span> <span data-key="footer_design_by">Diseño&nbsp;por&nbsp;X Digital Services</span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Page Footer-->
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Javascript-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/translations.js"></script>
+  <script>
+    let currentLanguage = 'es';
+
+    function translatePage(lang) {
+      const elements = document.querySelectorAll('[data-key]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        // Asegurarse que translations[lang] y translations[lang][key] existen
+        if (translations && translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        } else {
+            console.warn(`Missing translation for key: ${key} in language: ${lang}`);
+        }
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+      translatePage(currentLanguage);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Asegurarse que translations.js se cargó y `translations` está definido
+      if (typeof translations !== 'undefined') {
+        translatePage(currentLanguage);
+      } else {
+        console.error('Translations object not found. Check translations.js');
+      }
+    });
+  </script>
+  <!-- coded by Himic-->
 </body>
-
-
 
 </html>
