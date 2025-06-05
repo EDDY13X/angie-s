@@ -16,11 +16,37 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- 
-    NOTA DEL DESARROLLADOR: Asegúrate de que las rutas a tus archivos CSS (bootstrap.css, fonts.css, style.css) 
-    son correctas y que estos archivos contienen los estilos necesarios para el RD Navbar.
-    El problema del header cubriendo media pantalla es muy probable que se deba a estilos en estos archivos.
-  -->
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <style>
+    /* Estilos para la imagen superpuesta en el carrusel de portada */
+    .imagen-superpuesta-portada {
+      position: absolute; /* Posicionamiento absoluto respecto al contenedor padre (el div con position: relative) */
+      top: 20px;          /* Distancia desde la parte superior. Ajusta este valor. */
+      right: 20px;         /* Distancia desde la derecha. Ajusta este valor. */
+      z-index: 10;        /* Asegura que la imagen esté por encima de otros elementos de la diapositiva */
+      /* width: 200px; */    /* Ancho deseado para tu imagen. Ajusta este valor o usa scale. */
+      /* height: auto; */    /* Mantiene la proporción de la imagen */
+    }
+    .privacy-policy-content {
+      text-align: left;
+      max-height: 70vh; /* Altura máxima para el contenido, habilita scroll si es necesario */
+      overflow-y: auto; /* Habilita scroll vertical si el contenido es muy largo */
+      line-height: 1.6;
+    }
+    .privacy-policy-content h2, .privacy-policy-content h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .privacy-policy-content p {
+      margin-bottom: 1em;
+    }
+    .privacy-policy-content ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 1em;
+    }
+  </style>
 </head>
 
 <body>
@@ -66,52 +92,17 @@
   <div class="page">
     <!-- Page Header-->
     <header class="section page-header">
-      <!-- 
-        NOTA DEL DESARROLLADOR: Revisa los estilos CSS para `.page-header`.
-        Propiedades como `height`, `max-height`, `position` podrían estar causando el problema.
-      -->
-      <!-- RD Navbar-->
       <div class="rd-navbar-wrap">
-        <!-- 
-          NOTA DEL DESARROLLADOR: `.rd-navbar-wrap` es otro selector a investigar en tu CSS.
-          Podría tener estilos que afecten la altura o el posicionamiento del navbar.
-        -->
         <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
           data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
           data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
           data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
           data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="56px" data-xl-stick-up-offset="56px"
           data-xxl-stick-up-offset="56px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-          <!--
-            NOTA DEL DESARROLLADOR: El componente RD Navbar es complejo.
-            El problema de "cubrir media pantalla" probablemente se origine en los estilos CSS aplicados
-            a `.rd-navbar`, `.rd-navbar-fixed`, `.rd-navbar-inner`, o alguno de sus hijos.
-
-            QUÉ REVISAR EN TU CSS (style.css o similar):
-            1. Selectores como `.rd-navbar-fixed`:
-               - `height`: ¿Está definido a un valor grande como `50vh`, `100vh`, o un valor en píxeles muy alto?
-               - `max-height`: ¿Está restringiendo la altura adecuadamente?
-               - `min-height`: ¿Podría estar forzando una altura mínima excesiva?
-               - `position: fixed; top: 0; bottom: 0;` (o `bottom: 50%;`) podría hacer que ocupe toda o media pantalla.
-               - `padding` o `margin` excesivos.
-            2. `.rd-navbar-inner-outer` y `.rd-navbar-inner`: Sus alturas y paddings también contribuyen.
-            3. `.rd-navbar-project`: Esta es la sección de la galería. Si está visible por defecto (debido a la clase
-               `rd-navbar-project-hamburger-open` en el botón del menú de proyectos, o por CSS) y su contenido es alto,
-               podría expandir enormemente un header fijo. Busca estilos como:
-               - `.rd-navbar-project.active` (o similar si se añade una clase cuando está abierto)
-               - `.rd-navbar-project-content` (altura, overflow)
-            4. JavaScript (`script.js`, `core.min.js`): Revisa si algún script está modificando dinámicamente
-               la altura o estilos del header/navbar.
-            5. Utiliza las herramientas de desarrollador de tu navegador (Inspeccionar Elemento) para ver los estilos computados
-               del header y sus componentes. Esto te ayudará a identificar qué regla CSS está causando la altura excesiva.
-          -->
           <div class="rd-navbar-inner-outer">
             <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
               <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <!-- RD Navbar Brand-->
                 <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark"
                       src="images/logo-198x66.png" alt="" width="198" height="66" /></a></div>
               </div>
@@ -143,7 +134,6 @@
                   </ul>
                 </div>
                 <div class="rd-navbar-main">
-                  <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html" data-key="menu_home">Inicio</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html" data-key="menu_about">Acerca de</a></li>
@@ -152,11 +142,6 @@
                   </ul>
                 </div>
               </div>
-              <!-- 
-                NOTA DEL DESARROLLADOR: Este es el botón que abre la galería/proyectos.
-                La clase `rd-navbar-project-hamburger-open` podría indicar que la galería está abierta por defecto.
-                Si la galería (`.rd-navbar-project`) es muy alta, esto podría ser la causa del problema.
-              -->
               <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1"
                 data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
                 data-multitoggle-isolate="data-multitoggle-isolate">
@@ -295,53 +280,23 @@
         </nav>
       </div>
     </header>
- <!-- Swiper-->
-<section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true"
-  data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
-  <div class="swiper-wrapper text-sm-left">
-    <div class="swiper-slide context-dark" data-slide-bg="images/slide-1-1920x753.jpg">
-      <!-- Contenedor para posicionamiento relativo -->
-      <div style="position: relative; width: 100%; height: 100%;">
-        
-        <!-- TU NUEVA IMAGEN AQUÍ -->
-        <img src="images/AcreditedBusiness.jpeg" alt="Descripción de tu imagen superpuesta" class="imagen-superpuesta-portada" style="transform: scale(0.5);">
-        <!-- FIN DE TU NUEVA IMAGEN -->
 
-        <div class="swiper-slide-caption section-md">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
-                <h3 class=" oh swiper-title">
-                  <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_slide1_title">Limpieza Impecable</span>
-                </h3>
-                <p class="big swiper-text" data-caption-animate="fadeInLeft" data-caption-delay="300" data-key="hero_slide1_subtitle">Experimente la calidad de Angie´s Cleaning Services, una de las mejores empresas de limpieza.</p>
-                <a class=" button button-lg button-primary button-winona button-shadow-2"
-                  href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
-                  data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
-                  Ver nuestros servicios
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- Fin del contenedor de posicionamiento relativo -->
-    </div>
-    <div class="swiper-slide context-dark" data-slide-bg="images/slide-2-1920x753.jpg">
-      <!-- Si quieres la imagen en la segunda diapositiva, también necesitarías el div con position:relative y la imagen aquí -->
-      <div style="position: relative; width: 100%; height: 100%;">
-        
-       <img src="images/AcreditedBusiness.jpeg" alt="Descripción de tu imagen superpuesta" class="imagen-superpuesta-portada" style="transform: scale(0.5);">
-        
-          <div class="swiper-slide-caption section-md">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
-                  <h3 class="oh swiper-title"><span class="d-inline-block" data-caption-animate="slideInDown"
-                      data-caption-delay="0" data-key="hero_slide2_title">Calidad y Confianza</span></h3>
-                  <p class="big swiper-text" data-caption-animate="fadeInRight" data-caption-delay="300" data-key="hero_slide2_subtitle">Utilizamos solo
-                    los mejores productos y técnicas para ofrecer servicios de limpieza inigualables.</p>
-                  <div class="button-wrap oh">
-                    <a class=" button button-lg button-primary button-winona button-shadow-2"
+    <!-- Swiper-->
+    <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true"
+      data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
+      <div class="swiper-wrapper text-sm-left">
+        <div class="swiper-slide context-dark" data-slide-bg="images/slide-1-1920x753.jpg">
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="images/AcreditedBusiness.jpeg" alt="BBB Acredited Business Seal" class="imagen-superpuesta-portada" style="transform: scale(0.5);">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
+                    <h3 class="oh swiper-title">
+                      <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_slide1_title">Limpieza Impecable</span>
+                    </h3>
+                    <p class="big swiper-text" data-caption-animate="fadeInLeft" data-caption-delay="300" data-key="hero_slide1_subtitle">Experimente la calidad de Angie´s Cleaning Services, una de las mejores empresas de limpieza.</p>
+                    <a class="button button-lg button-primary button-winona button-shadow-2"
                       href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
                       data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
                       Ver nuestros servicios
@@ -351,25 +306,128 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="swiper-slide context-dark" data-slide-bg="images/slide-2-1920x753.jpg">
+          <div style="position: relative; width: 100%; height: 100%;">
+            <img src="images/AcreditedBusiness.jpeg" alt="BBB Acredited Business Seal" class="imagen-superpuesta-portada" style="transform: scale(0.5);">
+            <div class="swiper-slide-caption section-md">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
+                    <h3 class="oh swiper-title"><span class="d-inline-block" data-caption-animate="slideInDown"
+                        data-caption-delay="0" data-key="hero_slide2_title">Calidad y Confianza</span></h3>
+                    <p class="big swiper-text" data-caption-animate="fadeInRight" data-caption-delay="300" data-key="hero_slide2_subtitle">Utilizamos solo
+                      los mejores productos y técnicas para ofrecer servicios de limpieza inigualables.</p>
+                    <div class="button-wrap oh">
+                      <a class="button button-lg button-primary button-winona button-shadow-2"
+                        href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479/"
+                        data-caption-animate="slideInUp" data-caption-delay="0" data-key="hero_cta_button">
+                        Ver nuestros servicios
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- Swiper Pagination-->
-  <div class="swiper-pagination" data-bullet-custom="true"></div>
-  <!-- Swiper Navigation-->
-  <div class="swiper-button-prev">
-    <div class="preview">
-      <div class="preview__img"></div>
-    </div>
-    <div class="swiper-button-arrow"></div>
-  </div>
-  <div class="swiper-button-next">
-    <div class="swiper-button-arrow"></div>
-    <div class="preview">
-      <div class="preview__img"></div>
-    </div>
-  </div>
-</section>
+      <div class="swiper-pagination" data-bullet-custom="true"></div>
+      <div class="swiper-button-prev">
+        <div class="preview">
+          <div class="preview__img"></div>
+        </div>
+        <div class="swiper-button-arrow"></div>
+      </div>
+      <div class="swiper-button-next">
+        <div class="swiper-button-arrow"></div>
+        <div class="preview">
+          <div class="preview__img"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Offer-->
+    <section class="section section-md bg-default">
+      <div class="container">
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown" data-key="services_section_title">Nuestros Servicios</span></h3>
+        <div class="row row-md row-30">
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-1-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-leaf"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_cleaning_homes">Limpieza de Casas</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-2-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-sun"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_deep_cleaning">Limpieza Profunda</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-3-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-trash"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_post_construction">Limpieza Post-Construcción</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-4-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-home"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_airbnb">Limpieza de Airbnb</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInUp">
+                <div class="services-terri-figure"><img src="images/menu-5-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-apartment"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_fridge">Limpieza de Refrigeradores</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="oh-desktop">
+              <article class="services-terri wow slideInDown">
+                <div class="services-terri-figure"><img src="images/menu-6-370x278.jpg" alt="" width="370"
+                    height="278" />
+                </div>
+                <div class="services-terri-caption"><span class="services-terri-icon linearicons-star"></span>
+                  <h5 class="services-terri-title"><a href="#" data-key="services_carpets">Limpieza de Alfombras</a></h5>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section CTA-->
     <section class="primary-overlay section parallax-container" data-parallax-img="images/bg-3.jpg">
       <div class="parallax-content section-xl context-dark text-md-left">
@@ -397,7 +455,6 @@
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp" data-key="featured_services_title">Servicios Destacados</span></h3>
         <div class="row row-lg row-30">
           <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!-- Product-->
             <article class="product wow fadeInLeft" data-wow-delay=".15s">
               <div class="product-figure"><img src="images/product-1-161x162.png" alt="" width="161" height="162" />
               </div>
@@ -409,7 +466,6 @@
             </article>
           </div>
           <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!-- Product-->
             <article class="product wow fadeInLeft" data-wow-delay=".1s">
               <div class="product-figure"><img src="images/product-2-161x162.png" alt="" width="161" height="162" />
               </div>
@@ -421,7 +477,6 @@
             </article>
           </div>
           <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!-- Product-->
             <article class="product wow fadeInLeft" data-wow-delay=".05s">
               <div class="product-figure"><img src="images/product-3-161x162.png" alt="" width="161" height="162" />
               </div>
@@ -433,7 +488,6 @@
             </article>
           </div>
           <div class="col-sm-6 col-lg-4 col-xl-3">
-            <!-- Product-->
             <article class="product wow fadeInLeft">
               <div class="product-figure"><img src="images/product-4-161x162.png" alt="" width="161" height="162" />
               </div>
@@ -469,12 +523,6 @@
       </div>
     </section>
 
-    <!-- 
-      NOTA DEL DESARROLLADOR: Parece que tienes dos secciones de galería "isotope" casi idénticas. 
-      La primera (arriba) solo tiene texto de marcador de posición en las miniaturas.
-      La segunda (abajo) tiene imágenes reales y enlaces.
-      Verifica si esto es intencional o si una de ellas es redundante.
-    -->
     <section class="section section-last bg-default">
       <div class="container-fluid container-inset-0 isotope-wrap">
         <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery"
@@ -557,7 +605,6 @@
         <div class="container-fluid container-inset-0 isotope-wrap">
           <div class="row row-10 gutters-10 isotope" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
                 <a class="thumbnail-mary-figure" href="images/gallery-1-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-1-310x585.jpg" alt="" width="310" height="585"/>
@@ -571,7 +618,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-big wow slideInRight">
                 <a class="thumbnail-mary-figure" href="images/gallery-2-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-2-631x587.jpg" alt="" width="631" height="587"/>
@@ -585,7 +631,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInDown">
                 <a class="thumbnail-mary-figure" href="images/gallery-3-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-3-311x289.jpg" alt="" width="311" height="289"/>
@@ -599,7 +644,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-8 col-xl-4 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary wow slideInUp">
                 <a class="thumbnail-mary-figure" href="images/gallery-4-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-4-631x289.jpg" alt="" width="631" height="289"/>
@@ -613,7 +657,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInUp">
                 <a class="thumbnail-mary-figure" href="images/gallery-5-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-5-311x289.jpg" alt="" width="311" height="289"/>
@@ -627,7 +670,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInRight">
                 <a class="thumbnail-mary-figure" href="images/gallery-6-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-6-311x289.jpg" alt="" width="311" height="289"/>
@@ -641,7 +683,6 @@
               </article>
             </div>
             <div class="col-xs-6 col-sm-4 col-xl-2 isotope-item oh-desktop">
-              <!-- Thumbnail Mary-->
               <article class="thumbnail thumbnail-mary thumbnail-mary-2 wow slideInLeft">
                 <a class="thumbnail-mary-figure" href="images/gallery-7-1200x800-original.jpg" data-lightgallery="item">
                   <img src="images/gallery-7-311x289.jpg" alt="" width="311" height="289"/>
@@ -658,33 +699,16 @@
         </div>
       </section>
       
-    <!-- 
-      NOTA DEL DESARROLLADOR: Las siguientes etiquetas </form>, </div>, y </section> parecían estar fuera de lugar
-      o no tener etiquetas de apertura correspondientes en el código original. Han sido eliminadas.
-      Si el div "group-custom-1" debía estar dentro de una sección o formulario, asegúrate de estructurarlo correctamente.
-      Originalmente, el código era:
-      </div>
-      </form>
-      </div>
-      </section>
-      Esto es incorrecto. El div "group-custom-1" está ahora correctamente posicionado como un bloque independiente.
-      Si necesitas que esté dentro de una sección, deberás añadir las etiquetas <section> y <div class="container"> (o similar) apropiadas.
-    -->
     <div class="group-custom-1 group-middle oh-desktop">
       <a href="https://clienthub.getjobber.com/booking/93945bd7-b5b4-44ec-99f5-163c3eaf2479"
         class="button button-lg button-primary button-winona wow fadeInRight" role="button" data-key="send_message_button">Enviar mensaje</a>
-
-      <!-- Quote Classic-->
       <article class="quote-classic quote-classic-3 wow slideInDown">
         <div class="quote-classic-text">
           <p class="q" data-key="quote_reservation">Por favor, reserva con al menos 1 día de anticipación.</p>
         </div>
       </article>
     </div>
-    <!-- Aquí terminaba el bloque problemático. Las etiquetas </form></div></section> han sido eliminadas. -->
 
-
-    <!-- Section Services Last section-->
     <section class="section section-sm bg-default">
       <div class="container">
         <div class="owl-carousel owl-style-11 dots-style-2" data-items="1" data-sm-items="1" data-lg-items="2"
@@ -723,6 +747,7 @@
         </div>
       </div>
     </section>
+
     <!-- Page Footer-->
     <footer class="section footer-modern context-dark footer-modern-2">
       <div class="footer-modern-line">
@@ -769,7 +794,7 @@
               <div class="row row-30 align-items-center text-lg-center">
                 <div class="col-md-7 col-xl-6"><a class="brand" href="index.html"><img
                       src="images/logo-inverse-198x66.png" alt="" width="198" height="66" /></a></div>
-                <div class="col-md-5 col-xl-6">
+                <div class="col-md-5 col-xl-6" style="padding-top: 10px;"> <!-- Añadido padding para mejor visualización del sello BBB -->
                   <a href="https://www.bbb.org/us/tx/san-antonio/profile/cleaning-services/angie-s-cleaning-services-0825-1000232416/#sealclick" target="_blank" rel="nofollow"><img src="https://seal-austin.bbb.org/seals/blue-seal-200-42-bbb-1000232416.png" style="border: 0;" alt="Angie’s Cleaning Services  BBB Business Review" /></a>
                 </div>
               </div>
@@ -804,12 +829,17 @@
       </div>
       <div class="footer-modern-line-3">
         <div class="container">
-          <div class="row row-10 justify-content-between">
+          <div class="row row-10 justify-content-between align-items-center"> <!-- Añadido align-items-center -->
             <div class="col-md-6"><span data-key="footer_san_antonio">San Antonio, Texas</span></div>
             <div class="col-md-auto">
-              <p class="rights"><span>&copy;&nbsp;</span><span
-                  class="copyright-year"></span><span></span><span>.&nbsp;</span>
-                <span data-key="footer_all_rights_reserved">Todos los Derechos Reservados.</span><span> <span data-key="footer_design_by">Diseño&nbsp;por&nbsp;X Digital Services</span></span>
+              <p class="rights" style="margin-bottom: 0;"> <!-- Quitado margen inferior para mejor alineación -->
+                <span>&copy;&nbsp;</span><span class="copyright-year"></span><span></span><span>.&nbsp;</span>
+                <span data-key="footer_all_rights_reserved">Todos los Derechos Reservados.</span>
+                <span> <span data-key="footer_design_by">Diseño&nbsp;por&nbsp;X Digital Services</span></span>
+                <!-- Botón de Política de Privacidad -->
+                <span style="margin-left: 15px;">
+                  <button id="privacyPolicyButton" class="button button-xs button-primary button-winona" style="padding: 5px 10px; font-size: 0.8em;" data-key="footer_privacy_policy">Política de Privacidad</button>
+                </span>
               </p>
             </div>
           </div>
@@ -820,22 +850,38 @@
   </div>
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
+
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/translations.js"></script>
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
+    // Script de Traducción (existente)
     let currentLanguage = 'es';
 
     function translatePage(lang) {
       const elements = document.querySelectorAll('[data-key]');
       elements.forEach(el => {
         const key = el.getAttribute('data-key');
-        // Asegurarse que translations[lang] y translations[lang][key] existen
-        if (translations && translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+        if (translations && translations[lang] && translations[lang][key] !== undefined) { // Verifica que la key exista
+            // Si el elemento es un botón o un span dentro de un botón, actualiza su textContent
+            if (el.tagName === 'BUTTON' || (el.parentElement && el.parentElement.tagName === 'BUTTON')) {
+                 el.textContent = translations[lang][key];
+            } else if (el.tagName === 'A' && el.classList.contains('rd-nav-link')) { // Para los links de navegación
+                 el.textContent = translations[lang][key];
+            } else if (el.tagName === 'H5' && el.classList.contains('services-terri-title')) { // Para títulos de servicios
+                // No hacer nada aquí si el <a> interno ya se traduce
+            } else if (el.tagName === 'A' && el.parentElement && el.parentElement.classList.contains('services-terri-title')) { // Para el <a> dentro de h5.services-terri-title
+                 el.textContent = translations[lang][key];
+            }
+            else { // Para otros elementos como p, span, h3, etc.
+                 el.textContent = translations[lang][key];
+            }
         } else {
-            console.warn(`Missing translation for key: ${key} in language: ${lang}`);
+          // console.warn(`Missing translation for key: ${key} in language: ${lang}`);
         }
       });
     }
@@ -845,16 +891,79 @@
       translatePage(currentLanguage);
     });
 
+    // --- Script para Política de Privacidad con SweetAlert2 ---
+    const privacyPolicyContent = `
+      <div class="privacy-policy-content">
+        <h2>Privacy Policy for Angie’s Cleaning Services</h2>
+        <p><strong>Last updated: 05/23/2025</strong></p>
+
+        <h3>Our Commitment to Privacy</h3>
+        <p>At Angie’s Cleaning Services, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you interact with our business, whether through our website, over the phone, or in person.</p>
+
+        <h3>Information We Collect</h3>
+        <p>This policy applies to all information collected or submitted via our website and/or social media. We may request data for quotes, services, or additional information. The types of personal information we may collect include:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Phone number</li>
+          <li>Email address</li>
+          <li>Mailing or service address</li>
+          <li>Payment information (if applicable)</li>
+          <li>Details about your project or service request</li>
+        </ul>
+        <p>We may also collect non-personally identifiable information, such as browser type, pages visited, or general location, to better understand user behavior and improve our services.</p>
+
+        <h3>How We Use Your Information</h3>
+        <p>We use the information you provide to deliver services, respond to inquiries, and provide quotes or updates. We only share your information with trusted third parties when necessary to fulfill your request.</p>
+        <p>Your contact details may be used to follow up with you, but we will not use them for unrelated marketing without your consent.</p>
+        <p>We may also use non-identifying, aggregated data to improve our website and/or social media accounts or services. This data does not include anything personally identifiable.</p>
+        <p>We do not use or share your personal information for any other purpose without giving you the opportunity to opt out.</p>
+
+        <h3>Our Commitment to Data Security</h3>
+        <p>To prevent unauthorized access and maintain data accuracy, we implement appropriate administrative, physical, and technical safeguards to protect the information we collect.</p>
+
+        <h3>Our Commitment to Children’s Privacy</h3>
+        <p>We are committed to protecting the privacy of children. We do not knowingly collect or store personal information from anyone under the age of 13, and our website and/or social media accounts are not intended to attract children.</p>
+
+        <h3>Your Privacy Rights</h3>
+        <p>Depending on your location, you may have certain privacy rights (such as the right to access, correct, delete, or restrict the use of your personal data). Please contact us to exercise these rights.</p>
+
+        <h3>How to Contact Us</h3>
+        <p>If you have any questions, concerns, or requests related to this privacy policy, please contact us:</p>
+        <p>
+          Email: angiesscleaning@gmail.com<br>
+          Phone: (210) 901-4985<br>
+          Website: https://www.angiescleaning.services/index.html
+        </p>
+      </div>
+    `;
+
+    document.getElementById('privacyPolicyButton').addEventListener('click', function() {
+      Swal.fire({
+        title: '<strong>Política de Privacidad</strong>',
+        html: privacyPolicyContent,
+        width: '80%', // Ancho del modal
+        confirmButtonText: 'Cerrar',
+        showCloseButton: true,
+        customClass: {
+            popup: 'privacy-popup-custom' // Clase para estilos personalizados si es necesario
+        }
+      });
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
-      // Asegurarse que translations.js se cargó y `translations` está definido
       if (typeof translations !== 'undefined') {
-        translatePage(currentLanguage);
+        translatePage(currentLanguage); // Traduce la página al cargar
       } else {
         console.error('Translations object not found. Check translations.js');
+      }
+
+      // Actualizar el año del copyright
+      const copyrightYear = document.querySelector('.copyright-year');
+      if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
       }
     });
   </script>
   <!-- coded by Himic-->
 </body>
-
 </html>
